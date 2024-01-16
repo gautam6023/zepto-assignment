@@ -7,7 +7,7 @@ import { IoMdClose } from "react-icons/io";
 
 const Dropdown = () => {
   const containerRef = useRef<null | HTMLDivElement>(null);
-  const [isFocused, setIsFocused] = useState(true);
+  const [isFocused, setIsFocused] = useState(false);
   const [userlist, setUserList] = useState<IUsers[]>(users);
   const [selectedUsers, setSelectedUsers] = useState<IUsers[]>([]);
   const [searchText, setSearchText] = useState<string>("");
