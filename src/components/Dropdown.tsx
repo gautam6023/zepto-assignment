@@ -37,7 +37,7 @@ const Dropdown = () => {
   const searchUsersAndSet = (text: string) => {
     if (!text) {
       if (selectedUsers.length > 0) {
-        handleRemainedUsers(users);
+        handleRemainedUsers(selectedUsers);
       } else {
         setUserList(users);
       }
@@ -72,7 +72,7 @@ const Dropdown = () => {
   };
 
   const handleKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
-    if (event.key === "Backspace" && selectedUsers.length > 0 && !isBackspacePressed) {
+    if (event.key === "Backspace" && selectedUsers.length > 0 && !isBackspacePressed && !searchText) {
       setIsBackspacePressed(true);
     }
     if (isBackspacePressed) {
